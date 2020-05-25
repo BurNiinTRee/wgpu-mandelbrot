@@ -270,7 +270,7 @@ impl State {
                     } = self.uniforms;
 
                     offset[0] += scale * aspect_ratio * 4.0 * delta_x / self.size.width as f32;
-                    offset[1] -= scale * aspect_ratio * 4.0 * delta_y / self.size.height as f32;
+                    offset[1] -= scale * 4.0 * delta_y / self.size.height as f32;
                 }
                 self.cursor_position = *position;
                 true
