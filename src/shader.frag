@@ -34,7 +34,7 @@ int mandelbrot(vec2 c) {
 
 void main() {
 
-    vec2 c = scale * vec2(2.0*aspect_ratio, -2.0) * coordinate - offset;
+    vec2 c = scale * vec2(2.0*aspect_ratio, 2.0) * coordinate - offset;
     
     int iters = mandelbrot(c);
     float color_value;
