@@ -114,8 +114,8 @@ impl State {
 
         let swap_chain = device.create_swap_chain(&surface, &sc_desc);
 
-        let vs_spirv = include_bytes!(concat!(env!("OUT_DIR"), "/shader.vert.spirv"));
-        let fs_spirv = include_bytes!(concat!(env!("OUT_DIR"), "/shader.frag.spirv"));
+        let vs_spirv = include_bytes!(concat!(env!("OUT_DIR"), "/shader.vert"));
+        let fs_spirv = include_bytes!(concat!(env!("OUT_DIR"), "/shader.frag"));
 
         let vs_data = wgpu::read_spirv(std::io::Cursor::new(&vs_spirv[..])).unwrap();
         let fs_data = wgpu::read_spirv(std::io::Cursor::new(&fs_spirv[..])).unwrap();
