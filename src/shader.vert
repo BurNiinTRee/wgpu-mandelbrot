@@ -1,9 +1,15 @@
 #version 450
 
-layout(location=0) in vec2 a_position;
 layout(location=0) out vec2 coordinate;
 
+const vec2 positions[4] = vec2[4](
+    vec2(-1.0, -1.0),
+    vec2(1.0, -1.0),
+    vec2(-1.0, 1.0),
+    vec2(1.0, 1.0)
+);
+
 void main() {
-    coordinate = a_position;
-    gl_Position = vec4(a_position, 0.0, 1.0);
+    coordinate = positions[gl_VertexIndex];
+    gl_Position = vec4(coordinate, 0.0, 1.0);
 }

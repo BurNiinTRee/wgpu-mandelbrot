@@ -20,7 +20,7 @@ fn compile_shader<P: AsRef<Path>>(path: P, shader_type: shaderc::ShaderKind) {
         .unwrap();
 
     let out_dir = PathBuf::from(env::var("OUT_DIR").unwrap());
-    let mut out_name = path.file_name().unwrap().to_str().unwrap().to_owned();
+    let out_name = path.file_name().unwrap().to_str().unwrap().to_owned();
     let mut out_file = fs::File::create(out_dir.join(&out_name)).unwrap();
     out_file.write_all(binary_result.as_binary_u8()).unwrap();
 }
