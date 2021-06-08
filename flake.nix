@@ -55,7 +55,7 @@
 
               mkdir -p $out/share/applications
               substituteAll ${desktopFile}/share/applications/wgpu-mandelbrot.desktop \
-                $out/share/applications/wgpu-mandelbrot.dekstop
+                $out/share/applications/wgpu-mandelbrot.desktop
             '';
           };
         };
